@@ -53,12 +53,12 @@
 												.attr("width", width + margin.left + margin.right)
 												.attr("height", (height + margin.top + margin.bottom));
 												
-						d3.csv('Nanog-bin5-test.csv', createChart);
+						d3.csv('Nanog-bin5', createChart);
 						
 						function createChart(data){
 							var countries = [];
 							var charts = [];
-							var maxDataPoint = 140;
+							var maxDataPoint = 30;
 							
 							/* Loop through first row and get each country 
 								and push it into an array to use later */
