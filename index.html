@@ -73,7 +73,7 @@
 							data.forEach(function(d) {
 								// D3 needs a date object, let's convert it just one time
 								d.Year = d.Year;
-								d.Tcfcp2l1 = d.Tcfcp2l1;
+								d.Tcfcp2l1 = +d.Tcfcp2l1;
 							});
 				
 							for(var i = 0; i < countriesCount; i++){
