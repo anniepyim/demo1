@@ -179,12 +179,12 @@
 							/* XScale is time based */
 							this.xScale = d3.scale.linear()
 									.range([0, this.width])
-									.domain([0,1200]);
+									.domain(d3.extent(this.chartData.map(function(d) { return d.Year; })));
 							
 							/* YScale is linear based on the maxData Point we found earlier */
 							this.yScale = d3.scale.linear()
 									.range([this.height,0])
-									.domain([0,this.maxDataPoint]);
+									.domain([0,100]);
 							var xS = this.xScale;
 							var yS = this.yScale;
 							
