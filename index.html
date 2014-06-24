@@ -18,30 +18,17 @@
     <body>
         <div class="container">
 		
-			<!-- Codrops top bar -->
-            <div class="codrops-top">
-                <a href="http://tympanus.net/Development/3YearsOfCodrops/">
-                    <strong>&laquo; Previous Demo: </strong> 3 Years of Codrops - Some Highlights
-                </a>
-                <span class="right">
-					<a href="http://www.gapminder.org/data/">Data provided by Gapminder</a>
-                    <a href="http://tympanus.net/codrops/2012/08/24/multiple-area-charts-with-d3-js/">
-                        <strong>Back to the Codrops Article</strong>
-                    </a>
-                </span>
-                <div class="clr"></div>
-            </div><!--/ Codrops top bar -->
+
 			
 			<header>
 			
-				<h1><strong>Multiple Area Charts</strong> with D3.js</h1>
-				<p>Zoom and pan multiple area charts with D3.js</p>
+				<h1><strong>Nanog peaks</strong> with TF</h1>
 				
 			</header>
 			
 			<section class="main">
 				<div id="chart-container">
-					<h2>Electricity Consumption per capita</h2>
+					<h2>Nanog</h2>
 					<script type="text/javascript">
 						var margin = {top: 10, right: 40, bottom: 150, left: 60},
 								width = 940 - margin.left - margin.right,
@@ -53,7 +40,7 @@
 												.attr("width", width + margin.left + margin.right)
 												.attr("height", (height + margin.top + margin.bottom));
 												
-						d3.csv('Nanog-bin5', createChart);
+						d3.csv('Nanog-bin5-test.csv', createChart);
 						
 						function createChart(data){
 							var countries = [];
