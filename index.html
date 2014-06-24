@@ -164,7 +164,7 @@
 							/* YScale is linear based on the maxData Point we found earlier */
 							this.yScale = d3.scale.linear()
 									.range([this.height,0])
-									.domain([0, d3.max(data.map(function(d) { return d.Tcfcp2l1; }))]);
+									.domain([0, this.maxDataPoint]);
 							var xS = this.xScale;
 							var yS = this.yScale;
 							
