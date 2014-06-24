@@ -81,17 +81,18 @@
 							Let's also figure out the maximum data point
 							We'll use this later to set the Y-Axis scale
 							*/
-							data.forEach(function(d) {
-								for (var prop in d) {
-									if (d.hasOwnProperty(prop)) {
-										d[prop] = parseFloat(d[prop]);
+							
+							for (var prop in data[1]) {
+									if (data[1].hasOwnProperty(prop)) {
+										data[prop] = parseFloat(data[prop]);
 										
-										if (d[prop] > maxDataPoint) {
-											maxDataPoint = d[prop];
+										if (data[prop] > maxDataPoint) {
+											maxDataPoint = data[prop];
 										}
 									}
 								}
-								
+							
+							data.forEach(function(d) {
 								// D3 needs a date object, let's convert it just one time
 								d.Year = d.Year;
 							});
@@ -184,7 +185,7 @@
 							/* YScale is linear based on the maxData Point we found earlier */
 							this.yScale = d3.scale.linear()
 									.range([this.height,0])
-									.domain([0,100]);
+									.domain([0,this.maxDataPoint]);
 							var xS = this.xScale;
 							var yS = this.yScale;
 							
