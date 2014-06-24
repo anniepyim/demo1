@@ -58,7 +58,7 @@
 						function createChart(data){
 							var countries = [];
 							var charts = [];
-							var maxDataPoint = 0;
+							var maxDataPoint = 140;
 							
 							/* Loop through first row and get each country 
 								and push it into an array to use later */
@@ -82,15 +82,6 @@
 							We'll use this later to set the Y-Axis scale
 							*/
 							
-							for (var prop in data[1]) {
-									if (data[1].hasOwnProperty(prop)) {
-										data[prop] = parseFloat(data[prop]);
-										
-										if (data[prop] > maxDataPoint) {
-											maxDataPoint = data[prop];
-										}
-									}
-								}
 							
 							data.forEach(function(d) {
 								// D3 needs a date object, let's convert it just one time
