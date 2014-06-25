@@ -73,15 +73,14 @@
 							data.forEach(function(d) {		                             
     							// D3 needs a date object, let's convert it just one time
     								d.Year = d.Year;
-    								d.Esrrb = d.Esrrb;
 							});
 				
 							for(var i = 0; i < countriesCount; i++){
 								var MDP = 0;
 								
 								for (var j = 0; j < data.length - 1; j++){
-									if (data[j].Sox2 > MDP) {
-										MDP = data[j].Sox2;
+									if (data[j].countries[i] > MDP) {
+										MDP = data[j].countries[i];
 									}	
 								};
 								
