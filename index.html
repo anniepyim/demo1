@@ -82,8 +82,8 @@
 							for(var i = 0; i < countriesCount; i++){
 								var MDP = 0;
 								
-								for (var prop in d.Esrrb) {
-        								if (d.Esrrb.hasOwnProperty(prop)) {
+								for (var prop in d) {
+        								if (d.hasOwnProperty(prop)) {
             									d[prop] = parseFloat(d[prop]);
                                          
             									if (d[prop] > MDP) {
