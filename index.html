@@ -77,18 +77,20 @@
 							data.forEach(function(d) {		                             
     							// D3 needs a date object, let's convert it just one time
     								d.Year = d.Year;
-    								d.Esrrb = d.Esrrb;
 							});
 				
 							for(var i = 0; i < countriesCount; i++){
-								var thiscountry = 0;
-								var MDP = data[25].thiscountry;
+								var MDP = 0;
 								
-								/*for (var dat in d.Esrrb){
-									if (dat > MDP) {
-										MDP = dat;
-									}	
-								};*/
+								for (var prop in d.Esrrb) {
+        								if (d.Esrrb.hasOwnProperty(prop)) {
+            									d[prop] = parseFloat(d[prop]);
+                                         
+            									if (d[prop] > MDP) {
+                									MDP = d[prop];
+        									 }
+        								}
+    								};
 								
 								charts.push(new Chart({
 									data: data.slice(),
