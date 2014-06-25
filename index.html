@@ -42,17 +42,19 @@
 												
 						d3.csv('Nanog-bin5.csv', createChart);
 						
-						var countries = [];
-						for (var prop in data[0]) {
+						
+						
+						function createChart(data){
+							var charts = [];
+							var countries = [];
+							
+							for (var prop in data[0]) {
 								if (data[0].hasOwnProperty(prop)) {
 									if (prop != 'Year') {
 										countries.push(prop);
 									}
 								}
 							};
-						
-						function createChart(data){
-							var charts = [];
 							
 							/* Loop through first row and get each country 
 								and push it into an array to use later */
