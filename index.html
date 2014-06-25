@@ -45,7 +45,7 @@
 						function createChart(data){
 							var countries = [];
 							var charts = [];
-							var maxDataPoint;
+							var maxDataPoint = 90;
 							
 							/* Loop through first row and get each country 
 								and push it into an array to use later */
@@ -71,7 +71,7 @@
 							
 							
 	
-									                             
+							data.forEach(function(d) {		                             
     							// D3 needs a date object, let's convert it just one time
     								d.Year = d.Year;
 							});
@@ -83,7 +83,7 @@
 									name: countries[i],
 									width: width,
 									height: height * (1 / countriesCount),
-									maxDataPoint: 90,
+									maxDataPoint: maxDataPoint,
 									svg: svg,
 									margin: margin,
 									showBottomAxis: (i == countries.length - 1)
