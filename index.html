@@ -45,7 +45,7 @@
 						function createChart(data){
 							var countries = [];
 							var charts = [];
-							var maxDataPoint = 90;
+							var maxDataPoint;
 							
 							/* Loop through first row and get each country 
 								and push it into an array to use later */
@@ -71,9 +71,18 @@
 							
 							
 							data.forEach(function(d) {
-								// D3 needs a date object, let's convert it just one time
-								d.Year = d.Year;
-								d.Tcfcp2l1 = +d.Tcfcp2l1;
+    								for (var prop in d) {
+        								if (d.hasOwnProperty(prop)) {
+        									 d[prop] = parseFloat(d[prop]);
+                                         
+        									 if (d[prop] > maxDataPoint) {
+        									 maxDataPoint = d[prop];
+            									}
+        								}
+    								}
+									                             
+    							// D3 needs a date object, let's convert it just one time
+    								d.Year = new Date(d.Year,0,1);
 							});
 				
 							for(var i = 0; i < countriesCount; i++){
