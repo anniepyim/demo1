@@ -45,7 +45,6 @@
 						function createChart(data){
 							var countries = [];
 							var charts = [];
-							var maxDataPoint;
 							
 							/* Loop through first row and get each country 
 								and push it into an array to use later */
@@ -77,13 +76,15 @@
 							});
 				
 							for(var i = 0; i < countriesCount; i++){
+								var MDP = 100;
+								
 								charts.push(new Chart({
 									data: data.slice(),
 									id: i,
 									name: countries[i],
 									width: width,
 									height: height * (1 / countriesCount),
-									maxDataPoint: 200,
+									maxDataPoint: MDP,
 									svg: svg,
 									margin: margin,
 									showBottomAxis: (i == countries.length - 1)
