@@ -42,19 +42,21 @@
 												
 						d3.csv('Nanog-bin5.csv', createChart);
 						
-						function createChart(data){
-							var countries = [];
-							var charts = [];
-							
-							/* Loop through first row and get each country 
-								and push it into an array to use later */
-							for (var prop in data[0]) {
+						var countries = [];
+						for (var prop in data[0]) {
 								if (data[0].hasOwnProperty(prop)) {
 									if (prop != 'Year') {
 										countries.push(prop);
 									}
 								}
 							};
+						
+						function createChart(data){
+							var charts = [];
+							
+							/* Loop through first row and get each country 
+								and push it into an array to use later */
+							
 							
 							var countriesCount = countries.length;
 							var startYear = data[0].Year;
@@ -76,7 +78,7 @@
 							});
 				
 							for(var i = 0; i < countriesCount; i++){
-								var MDP = i*10;
+								var MDP = 100;
 								
 								/*for (var j = 0; j < data.length - 1; j++){
 									if (data[j].countries[i] > MDP) {
