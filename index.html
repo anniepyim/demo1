@@ -80,17 +80,13 @@
 							});
 				
 							for(var i = 0; i < countriesCount; i++){
-								var MDP = 0;
+								var MDP = 100;
 								
-								for (var prop in d) {
-        								if (d.hasOwnProperty(prop)) {
-            									d[prop] = parseFloat(d[prop]);
-                                         
-            									if (d[prop] > MDP) {
-                									MDP = d[prop];
-        									 }
-        								}
-    								};
+								/*for (var j = 0; j < data.length - 1; j++){
+									if (data[j].countries[i] > MDP){
+										MDP = data[j].countries[i];
+									}
+								}*/
 								
 								charts.push(new Chart({
 									data: data.slice(),
