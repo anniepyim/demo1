@@ -70,16 +70,7 @@
 							*/
 							
 							
-							data.forEach(function(d) {
-    								for (var prop in d) {
-        								if (d.hasOwnProperty(prop)) {
-        									 d[prop] = parseFloat(d[prop]);
-                                         
-        									 if (d[prop] > maxDataPoint) {
-        									 maxDataPoint = d[prop];
-            									}
-        								}
-    								}
+	
 									                             
     							// D3 needs a date object, let's convert it just one time
     								d.Year = d.Year;
@@ -92,7 +83,7 @@
 									name: countries[i],
 									width: width,
 									height: height * (1 / countriesCount),
-									maxDataPoint: maxDataPoint,
+									maxDataPoint: 90,
 									svg: svg,
 									margin: margin,
 									showBottomAxis: (i == countries.length - 1)
