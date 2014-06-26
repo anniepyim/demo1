@@ -78,6 +78,8 @@ d3.csv("stocks.csv", function(data) {
       .data(symbols)
     .enter().append("g")
       .attr("class", "symbol");
+      
+  setTimeout(overlappingArea, duration);
 
 });
 
