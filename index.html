@@ -75,14 +75,8 @@
 							});
 				
 							for(var i = 0; i < TFCount; i++){
-								var MDP = 0;
-								function (d){
-									for (dat in d.Esrrb){
-										if (dat > MDP){
-											MDP = dat;
-										}
-									}
-								}
+								var MDP = 100;
+							
 								
 								charts.push(new Chart({
 									data: data.slice(),
