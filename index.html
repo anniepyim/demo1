@@ -212,10 +212,13 @@
 							}
 							
 							/* bottom axis bellow the last TF */
+							
+							var bottomaxis = this.height + 10;
+							
 							if(this.showBottomAxis){
 									this.chartContainer.append("g")
 									.attr("class", "x axis bottom")
-									.attr("transform", "translate(0," + this.height + 10 + ")")
+									.attr("transform", "translate(0,100)")
 									.call(this.xAxisBottom);
 								}  
 								
