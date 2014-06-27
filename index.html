@@ -75,13 +75,14 @@
 							});
 				
 							for(var i = 0; i < TFCount; i++){
-								var MDP = 100;
-								
-								/*for (var j = 0; j < data.length - 1; j++){
-									if (data[j].TF[i] > MDP){
-										MDP = data[j].TF[i];
+								var MDP = 0;
+								function (d){
+									for (dat in d.Esrrb){
+										if (dat > MDP){
+											MDP = dat;
+										}
 									}
-								}*/
+								}
 								
 								charts.push(new Chart({
 									data: data.slice(),
@@ -212,8 +213,6 @@
 							}
 							
 							/* bottom axis bellow the last TF */
-							
-							var bottomaxis = this.height + 20;
 							
 							if(this.showBottomAxis){
 									this.chartContainer.append("g")
