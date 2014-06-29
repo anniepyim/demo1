@@ -78,7 +78,7 @@
 								var MDP = 100;
 								var unfilteredData = data;         
 								MDP = d3.max(unfilteredData, function(d){     
-									return Math.max(d["Esrrb"]);    
+									return Math.max(d[TF[i]]);    
 									});
 								
 								charts.push(new Chart({
