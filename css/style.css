@@ -34,7 +34,7 @@ text.instructions {
 }
 
 g.context g.brush rect.background {
-	fill: rgba(255,200,200);
+	fill: rgba(0,0,0);
 }
 
 g.context g.axis path {
