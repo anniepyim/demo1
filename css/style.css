@@ -78,6 +78,6 @@ g.esrrb path.chart {
 }
 
 g.context rect.background{
-	fill: rgb(200,200,255);
+	fill: rgb(0,0,0);
 	visibility: visible !important;
 }​
