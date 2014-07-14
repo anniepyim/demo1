@@ -34,7 +34,8 @@ text.instructions {
 }
 
 g.context g.brush rect.background {
-	fill: rgba(0,0,0,.1);
+	background: url(http://4206e9.medialib.glogster.com/media/69e15b92f6b0e39d35461277fd892c1ccbecb018d63df297774af4033de3b43d/the-word-hello-2.jpg) no-repeat;
+ 	background-size: 100%;
 }
 
 g.context g.axis path {
