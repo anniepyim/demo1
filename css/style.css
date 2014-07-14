@@ -34,7 +34,7 @@ text.instructions {
 }
 
 g.context g.brush rect.background {
-	fill: rgba(0,0,0);
+	fill: rgba(0,0,0,.1);
 }
 
 g.context g.axis path {
@@ -78,6 +78,6 @@ g.esrrb path.chart {
 }
 
 g.context rect.background{
-	fill: rgb(0,0,0);
+	fill: rgb(200,200,255);
 	visibility: visible !important;
 }​
