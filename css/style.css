@@ -34,7 +34,7 @@ text.instructions {
 }
 
 g.context g.brush rect.background {
-	background-image:url("http://img.mynextcar.gr/auto_images/879072/mercedes-benz_slk-200_2002-55f55.jpg");
+	background-image:url('http://img.mynextcar.gr/auto_images/879072/mercedes-benz_slk-200_2002-55f55.jpg');
  	background-size: 100%;
 }
 
